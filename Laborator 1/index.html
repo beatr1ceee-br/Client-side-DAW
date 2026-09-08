@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDrive - Mașini Premium</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigare -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Auto<span>Drive</span></div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Acasă</a></li>
+                <li><a href="#cars">Mașini</a></li>
+                <li><a href="#about">Despre noi</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn">☰</button>
+        </nav>
+    </header>
+
+
+    <!-- Secțiunea principală -->
+    <main>
+
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="subtitle">DESCOPERĂ DRUMUL TĂU</p>
+
+                <h1>
+                    Mașina perfectă<br>
+                    <span>pentru tine.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Descoperă o colecție de automobile moderne,
+                    puternice și elegante.
+                </p>
+
+                <a href="#cars" class="btn">Vezi mașinile</a>
+            </div>
+
+            <div class="hero-car">
+                <div class="car-placeholder">AUTOMOBILE</div>
+            </div>
+        </section>
+
+
+        <!-- Mașini -->
+        <section id="cars" class="cars-section">
+
+            <div class="section-title">
+                <p class="subtitle">COLECȚIA NOASTRĂ</p>
+                <h2>Mașini populare</h2>
+                <p>
+                    Alege modelul care se potrivește stilului tău.
+                </p>
+            </div>
+
+
+            <div class="cars-container">
+
+                <!-- Mașina 1 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <span>BMW</span>
+                    </div>
+
+                    <div class="car-info">
+                        <p class="car-type">SPORT • 2024</p>
+                        <h3>BMW M4</h3>
+
+                        <div class="car-details">
+                            <span>⚡ 503 CP</span>
+                            <span>🚀 3.9s</span>
+                        </div>
+
+                        <div class="car-bottom">
+                            <strong>85.000 €</strong>
+                            <button class="details-btn"
+                                    onclick="showMessage('BMW M4')">
+                                Detalii
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- Mașina 2 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <span>AUDI</span>
+                    </div>
+
+                    <div class="car-info">
+                        <p class="car-type">PREMIUM • 2024</p>
+                        <h3>Audi RS5</h3>
+
+                        <div class="car-details">
+                            <span>⚡ 444 CP</span>
+                            <span>🚀 3.9s</span>
+                        </div>
+
+                        <div class="car-bottom">
+                            <strong>78.000 €</strong>
+                            <button class="details-btn"
+                                    onclick="showMessage('Audi RS5')">
+                                Detalii
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- Mașina 3 -->
+                <article class="car-card">
+                    <div class="car-image">
+                        <span>PORSCHE</span>
+                    </div>
+
+                    <div class="car-info">
+                        <p class="car-type">LUXURY • 2024</p>
+                        <h3>Porsche 911</h3>
+
+                        <div class="car-details">
+                            <span>⚡ 443 CP</span>
+                            <span>🚀 3.5s</span>
+                        </div>
+
+                        <div class="car-bottom">
+                            <strong>120.000 €</strong>
+                            <button class="details-btn"
+                                    onclick="showMessage('Porsche 911')">
+                                Detalii
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- Despre noi -->
+        <section id="about" class="about-section">
+
+            <div class="about-content">
+                <p class="subtitle">DESPRE AUTODRIVE</p>
+
+                <h2>
+                    Mai mult decât<br>
+                    o mașină.
+                </h2>
+
+                <p>
+                    AutoDrive este o platformă dedicată pasionaților
+                    de automobile. Descoperă modele spectaculoase,
+                    compară caracteristicile și găsește următoarea
+                    ta mașină.
+                </p>
+
+                <button class="btn" onclick="showAboutMessage()">
+                    Află mai multe
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
+
+            <div class="section-title">
+                <p class="subtitle">CONTACT</p>
+                <h2>Ai o întrebare?</h2>
+                <p>
+                    Trimite-ne un mesaj și te vom contacta.
+                </p>
+            </div>
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Numele tău"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="Mesajul tău"
+                    rows="5"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Trimite mesajul
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">Auto<span>Drive</span></div>
+
+        <p>
+            © 2026 AutoDrive. Toate drepturile rezervate.
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
