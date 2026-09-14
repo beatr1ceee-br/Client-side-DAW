@@ -3,27 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client-side DAW</title>
+
+    <title>Client-side DAW - Laboratoare</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        .laboratoare {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .laborator {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid #2a5298;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .laborator:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .laborator h2 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .laborator p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .laborator a {
+            display: inline-block;
+            background-color: #2a5298;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .laborator a:hover {
+            background-color: #1e3c72;
+        }
+
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .laboratoare {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                width: 95%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Client-side DAW</h1>
+    <header>
+        <h1>Client-side DAW</h1>
+        <p>Laboratoare de dezvoltare web</p>
+    </header>
 
-    <p>Laboratoare:</p>
+    <main>
 
-    <ul>
-        <li>
-            <a href="Laborator%201/index.html">
-                Laborator 1 - AutoDrive
-            </a>
-        </li>
+        <div class="laboratoare">
 
-        <li>Laborator 2</li>
-        <li>Laborator 3</li>
-        <li>Laborator 4</li>
-        <li>Laborator 5</li>
-    </ul>
+            <div class="laborator">
+                <h2>Laborator 1</h2>
+                <p>Site web despre automobile, realizat folosind HTML, CSS și JavaScript.</p>
+                <a href="Laborator%201/index.html">Accesează Laboratorul 1</a>
+            </div>
+
+            <div class="laborator">
+                <h2>Laborator 2</h2>
+                <p>Recapitulare HTML: Republica Moldova, Norvegia și Suedia.</p>
+                <a href="Laborator%202/index.html">Accesează Laboratorul 2</a>
+            </div>
+
+            <div class="laborator">
+                <h2>Laborator 3</h2>
+                <p>Laboratorul 3 va fi adăugat aici.</p>
+                <a href="Laborator%203/index.html">Accesează Laboratorul 3</a>
+            </div>
+
+            <div class="laborator">
+                <h2>Laborator 4</h2>
+                <p>Laboratorul 4 va fi adăugat aici.</p>
+                <a href="Laborator%204/index.html">Accesează Laboratorul 4</a>
+            </div>
+
+            <div class="laborator">
+                <h2>Laborator 5</h2>
+                <p>Laboratorul 5 va fi adăugat aici.</p>
+                <a href="Laborator%205/index.html">Accesează Laboratorul 5</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Client-side DAW | Laboratoare de dezvoltare web</p>
+    </footer>
 
 </body>
 </html>
