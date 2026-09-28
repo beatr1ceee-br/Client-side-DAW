@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Exercises</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Exercises</h1>
+    </header>
+
+
+    <main>
+
+        <section class="card">
+
+            <h2>Exercițiul 1 - Funcție de calcul</h2>
+
+            <p>
+                Introdu două numere pentru a calcula suma lor.
+            </p>
+
+            <div class="inputs">
+
+                <input
+                    type="number"
+                    id="numberA"
+                    placeholder="Primul număr"
+                >
+
+                <input
+                    type="number"
+                    id="numberB"
+                    placeholder="Al doilea număr"
+                >
+
+            </div>
+
+            <button id="sumButton">
+                Calculează suma
+            </button>
+
+            <p id="sumResult"></p>
+
+        </section>
+
+
+        <!-- =========================
+             EXERCIȚIUL 2
+        ========================== -->
+
+        <section class="card">
+
+            <h2>Exercițiul 2 - Obiectul Student</h2>
+
+            <p>
+                Introdu datele studentului.
+            </p>
+
+            <div class="inputs">
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Numele studentului"
+                >
+
+                <input
+                    type="number"
+                    id="studentAge"
+                    placeholder="Vârsta"
+                >
+
+                <input
+                    type="number"
+                    id="studentGrade"
+                    placeholder="Nota"
+                    min="1"
+                    max="10"
+                >
+
+            </div>
+
+            <button id="studentButton">
+                Prezintă studentul
+            </button>
+
+            <p id="studentResult"></p>
+
+
+            <hr>
+
+
+            <h3>Modificarea notei</h3>
+
+            <p>
+                Introdu o nouă valoare pentru nota studentului.
+            </p>
+
+            <div class="inputs">
+
+                <input
+                    type="number"
+                    id="newGrade"
+                    placeholder="Noua notă"
+                    min="1"
+                    max="10"
+                >
+
+            </div>
+
+            <button id="gradeButton">
+                Modifică nota
+            </button>
+
+            <p id="gradeResult"></p>
+
+        </section>
+
+
+        <!-- =========================
+             EXERCIȚIUL 3
+        ========================== -->
+
+        <section class="card game-card">
+
+            <h2>Exercițiul 3 - Piatra, Hârtia, Foarfeca</h2>
+
+            <p>
+                Joacă împotriva calculatorului!
+            </p>
+
+
+            <div class="choices">
+
+                <button
+                    class="choice-button"
+                    data-choice="piatra"
+                >
+                    🪨 Piatra
+                </button>
+
+                <button
+                    class="choice-button"
+                    data-choice="hartia"
+                >
+                    📄 Hârtia
+                </button>
+
+                <button
+                    class="choice-button"
+                    data-choice="foarfeca"
+                >
+                    ✂️ Foarfeca
+                </button>
+
+            </div>
+
+
+            <div class="game-info">
+
+                <div class="result-box">
+
+                    <h3>Alegerea ta</h3>
+
+                    <p id="playerChoice">-</p>
+
+                </div>
+
+
+                <div class="result-box">
+
+                    <h3>Alegerea calculatorului</h3>
+
+                    <p id="computerChoice">-</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="round-result">
+
+                <h3>Rezultatul rundei</h3>
+
+                <p id="roundResult">
+                    Alege Piatra, Hârtia sau Foarfeca.
+                </p>
+
+            </div>
+
+
+            <div class="score">
+
+                <h3>Scor</h3>
+
+                <p>
+                    Tu:
+                    <span id="playerScore">0</span>
+                </p>
+
+                <p>
+                    Calculator:
+                    <span id="computerScore">0</span>
+                </p>
+
+                <p>
+                    Egalități:
+                    <span id="drawScore">0</span>
+                </p>
+
+                <p>
+                    Runde jucate:
+                    <span id="roundsPlayed">0</span>
+                </p>
+
+                <p id="leaderMessage">
+                    Scorul este egal.
+                </p>
+
+            </div>
+
+
+            <div id="finalMessage"></div>
+
+
+            <button id="newGameButton" class="new-game">
+                Joc nou
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>©2026 Exercises</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #fff5f8,
+        #fce4ec
+    );
+
+    color: #3d3035;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #e8a9ba,
+        #d98ca4
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    box-shadow:
+        0 4px 12px rgba(180, 100, 125, 0.18);
+}
+
+header h1 {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 40px auto;
+}
+
+
+/* =========================
+   CARDURI
+========================= */
+
+.card {
+    background-color: white;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 20px rgba(180, 100, 125, 0.10);
+
+    border-left: 6px solid #dfa0b2;
+}
+
+.card h2 {
+    color: #b85c78;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #b85c78;
+
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin-bottom: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   INPUTURI
+========================= */
+
+.inputs {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin: 20px 0;
+}
+
+input {
+    padding: 12px 15px;
+
+    border: 1px solid #e1b9c5;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #d98ca4;
+
+    box-shadow:
+        0 0 0 3px rgba(217, 140, 164, 0.15);
+}
+
+
+/* =========================
+   BUTOANE
+========================= */
+
+button {
+    border: none;
+
+    background-color: #d98ca4;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #c87591;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   REZULTATE
+========================= */
+
+#sumResult,
+#studentResult,
+#gradeResult {
+    margin-top: 15px;
+
+    padding: 12px;
+
+    background-color: #fff0f4;
+
+    border-radius: 8px;
+
+    color: #a34f6b;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SEPARATOR
+========================= */
+
+hr {
+    border: none;
+
+    border-top: 1px solid #f0d6de;
+
+    margin: 30px 0;
+}
+
+
+/* =========================
+   JOC
+========================= */
+
+.game-card {
+    text-align: center;
+}
+
+
+/* =========================
+   BUTOANELE JOCULUI
+========================= */
+
+.choices {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin: 25px 0;
+}
+
+.choice-button {
+    min-width: 150px;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   INFORMAȚII JOC
+========================= */
+
+.game-info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+.result-box {
+    background-color: #fff0f4;
+
+    padding: 20px;
+
+    border-radius: 12px;
+}
+
+.result-box h3 {
+    color: #b85c78;
+
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #c87591;
+}
+
+
+/* =========================
+   REZULTAT RUNDA
+========================= */
+
+.round-result {
+    background-color: #fde8ef;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin-top: 25px;
+}
+
+.round-result h3 {
+    color: #b85c78;
+
+    margin-bottom: 10px;
+}
+
+#roundResult {
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SCOR
+========================= */
+
+.score {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background-color: #fff8fa;
+
+    border-radius: 12px;
+}
+
+.score h3 {
+    color: #b85c78;
+
+    margin-bottom: 15px;
+}
+
+.score p {
+    margin: 8px 0;
+}
+
+.score span {
+    font-weight: bold;
+
+    color: #c87591;
+}
+
+
+/* =========================
+   MESAJ LIDER
+========================= */
+
+#leaderMessage {
+    margin-top: 15px;
+
+    font-weight: bold;
+
+    color: #b85c78;
+}
+
+
+/* =========================
+   MESAJ FINAL
+========================= */
+
+#finalMessage {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #a34f6b;
+}
+
+
+/* =========================
+   BUTON JOC NOU
+========================= */
+
+.new-game {
+    margin-top: 25px;
+
+    background-color: #9e7180;
+}
+
+.new-game:hover {
+    background-color: #805765;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #d98ca4;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 50px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .game-info {
+        grid-template-columns: 1fr;
+    }
+
+    .choice-button {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+}
