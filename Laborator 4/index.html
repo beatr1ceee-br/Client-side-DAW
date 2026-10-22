@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorul 4</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 30px 16px;
+      font-family: Arial, sans-serif;
+      background: #fff5f8;
+      color: #493640;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    header h1 {
+      color: #b34f78;
+    }
+
+    header p {
+      color: #856574;
+    }
+
+    section {
+      background: white;
+      padding: 22px;
+      margin-bottom: 22px;
+      border: 1px solid #f1d4df;
+      border-radius: 16px;
+      box-shadow: 0 5px 18px rgba(179, 79, 120, 0.08);
+    }
+
+    h2 {
+      color: #b34f78;
+      margin-top: 0;
+    }
+
+    h3 {
+      color: #8e4666;
+    }
+
+    input {
+      width: 100%;
+      max-width: 420px;
+      padding: 11px;
+      margin: 5px 0 12px;
+      border: 1px solid #e6b9cb;
+      border-radius: 8px;
+      font-size: 15px;
+      background: #fffafd;
+    }
+
+    input:focus {
+      outline: 2px solid #e8a9c2;
+    }
+
+    button {
+      padding: 10px 14px;
+      margin: 4px 5px 4px 0;
+      border: none;
+      border-radius: 8px;
+      background: #c76b91;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #a94e76;
+    }
+
+    .secondary {
+      background: #e9a9c1;
+      color: #512c3d;
+    }
+
+    .secondary:hover {
+      background: #dc8eae;
+    }
+
+    .list-output,
+    .result-output {
+      padding: 12px;
+      min-height: 22px;
+      background: #fff4f8;
+      border: 1px dashed #e6b9cb;
+      border-radius: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    .student-card {
+      margin: 12px 0;
+      padding: 14px;
+      background: #fff7fa;
+      border-left: 4px solid #d987a8;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+
+    .count {
+      font-weight: bold;
+      color: #8e4666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      color: #987786;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 16px;
+      }
+
+      button {
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Laboratorul 4</h1>
+      <p>Liste și metodele Array în JavaScript</p>
+    </header>
+
+    <section>
+      <h2>Exercițiile 1 și 2 – Liste în consolă</h2>
+    </section>
+
+    <section>
+      <h2>Exercițiile 3 și 4 – Lista de cumpărături</h2>
+
+      <label for="produs">Introdu un produs:</label><br>
+      <input type="text" id="produs" placeholder="De exemplu: Mere">
+
+      <div>
+        <button onclick="adaugaLaSfarsit()">
+          Adaugă la sfârșit
+        </button>
+
+        <button class="secondary" onclick="adaugaLaInceput()">
+          Adaugă la început
+        </button>
+      </div>
+
+      <div>
+        <button class="secondary" onclick="stergePrimul()">
+          Șterge primul
+        </button>
+
+        <button class="secondary" onclick="stergeUltimul()">
+          Șterge ultimul
+        </button>
+      </div>
+
+      <h3>Produse</h3>
+      <p id="listaProduse" class="list-output"></p>
+    </section>
+
+    <section>
+      <h2>Exercițiul 5 – Catalog electronic</h2>
+
+      <p id="numarElevi" class="count"></p>
+      <div id="catalog"></div>
+
+      <hr style="border: 0; border-top: 1px solid #f1d4df; margin: 22px 0;">
+
+      <h3>Adaugă elev</h3>
+
+      <label for="nume">Nume și prenume:</label><br>
+      <input type="text" id="nume" placeholder="Popescu Ana"><br>
+
+      <label for="varsta">Vârsta:</label><br>
+      <input type="number" id="varsta" min="1" max="120" placeholder="17"><br>
+
+      <label for="nota">Nota:</label><br>
+      <input type="number" id="nota" min="1" max="10" step="1" placeholder="9"><br>
+
+      <button onclick="adaugaElev()">Adaugă elev</button>
+
+      <hr style="border: 0; border-top: 1px solid #f1d4df; margin: 22px 0;">
+
+      <h3>Șterge elev</h3>
+
+      <label for="numeSterge">Numele elevului:</label><br>
+      <input type="text" id="numeSterge" placeholder="Introdu numele exact">
+
+      <button onclick="stergeElev()">Șterge elev</button>
+
+      <hr style="border: 0; border-top: 1px solid #f1d4df; margin: 22px 0;">
+
+      <h3>Caută elev</h3>
+
+      <label for="numeCauta">Numele elevului:</label><br>
+      <input type="text" id="numeCauta" placeholder="Introdu numele exact">
+
+      <button onclick="cautaElev()">Caută</button>
+
+      <p id="rezultatCautare" class="result-output"></p>
+    </section>
+
+    <footer>
+      Laborator de JavaScript – Array și metodele sale
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
