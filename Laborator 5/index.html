@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lista studenților</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h1>Lista studenților</h1>
+
+    <h2>Adaugă student</h2>
+
+    <form id="formular">
+
+        <input type="text" id="nume"
+               placeholder="Nume și prenume" required>
+
+        <input type="text" id="grupa"
+               placeholder="Grupa" required>
+
+        <input type="number" id="varsta"
+               placeholder="Vârsta" min="14" max="100" required>
+
+        <input type="text" id="specialitate"
+               placeholder="Specialitatea" required>
+
+        <button type="submit">Adaugă student</button>
+
+    </form>
+
+    <h2>Setări Flexbox</h2>
+
+    <label>Justify-content:</label>
+
+    <select id="justify">
+        <option value="flex-start">Flex-start</option>
+        <option value="center">Center</option>
+        <option value="flex-end">Flex-end</option>
+        <option value="space-between">Space-between</option>
+        <option value="space-around">Space-around</option>
+        <option value="space-evenly">Space-evenly</option>
+    </select>
+
+    <label>Align-items:</label>
+
+    <select id="align">
+        <option value="stretch">Stretch</option>
+        <option value="center">Center</option>
+        <option value="flex-start">Flex-start</option>
+        <option value="flex-end">Flex-end</option>
+    </select>
+
+    <label>Gap:</label>
+
+    <select id="gap">
+        <option value="10px">10px</option>
+        <option value="20px">20px</option>
+        <option value="30px">30px</option>
+    </select>
+
+    <label>Flex-wrap:</label>
+
+    <select id="wrap">
+        <option value="wrap">Wrap</option>
+        <option value="nowrap">No-wrap</option>
+    </select>
+
+    <button type="button" id="reset">
+        Resetează Flexbox
+    </button>
+
+    <h2>
+        Studenți înregistrați:
+        <span id="numar">0</span>
+    </h2>
+
+    <div id="lista"></div>
+
+    <p id="mesaj"></p>
+
+</body>
+</html>
